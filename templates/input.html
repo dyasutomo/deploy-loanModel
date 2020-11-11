@@ -1,0 +1,50 @@
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <h1>Data Input</h1>
+      <hr>
+
+      <form action="/predict" method="POST">
+
+        <div class="form-group">
+          <label>Loan Amount</label>
+          <input type="text" class="form-control" id="loan_amnt" name="loan_amnt" placeholder="Dollar">
+        </div>
+
+        <div class="form-group">
+          <label>Open Account</label>
+          <input type="text" class="form-control" id="open_acc" name="open_acc" placeholder="Integer or Float">
+        </div>
+
+        <div class="form-group">
+          <label>Inquiry last 6 months</label>
+          <input type="text" class="form-control" id="inq_6mths" name="inq_6mths" placeholder="Integer or Float">
+        </div>
+
+        <div class="form-group">
+          <label>Employment Length</label>
+          <input type="text" class="form-control" id="emp_length" name="emp_length" placeholder="Years">
+        </div>
+
+        <div class="form-group">
+          <label>Interest rate</label>
+          <input type="text" class="form-control" id="int_rate" name="int_rate" placeholder="percent">
+        </div>
+
+        <div class="form-group">
+          <label>FICO score</label>
+          <input type="text" class="form-control" id="fico_low" name="fico_low" placeholder="Integer">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Predict</button>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
